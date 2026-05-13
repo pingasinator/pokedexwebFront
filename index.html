@@ -3,30 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <title>PokeAPI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/types.css">
 </head>
 <body>
-<nav>
-    <!-- à faire -->
-</nav>
 <main>
-    <h2>Liste des pokémons</h2>
+    <div id="pokedex">
+        <div id="pokedex-left-side">
+            <div id="pokemon-title" class="screen">
+            </div>
+            <div id="pokemon-sprite" class="pokemon-sprite">
+            </div>
+            <div id="pokemon-buttons">
+                <button></button>
+                <button onclick="swicth_sprite('shiny')" class="sprite-controls-shiny"> Shiny</button>
+                <button onclick="swicth_sprite('orientation')" class="sprite-control"></button>
+            </div>
+            <div id="pokemon-description" class="screen">
+            </div>
+        </div>
+        <div id="pokedex-mid-side" class="gap">
+            <div class="hinge"></div>
+            <div class="hinge"></div>
+            <div class="hinge"></div>
+        </div>
+        <div id="pokedex-right-side">
+            <div id="pokemon-info">
+                <div id="pokemon-stats" class="screen">
+                    <ul>
+                        <li><div>Point de vie</div><div>5</div></li>
+                        <li><div>Attaque</div></li>
+                        <li><div>Défence</div></li>
+                        <li><div>Vitesse</div></li>
+                        <li><div>Attaque Spé.</div></li>
+                        <li><div>Défence Spé.</div></li>
+                    </ul>
+                </div>
+                <div id="pokemon-other-stats">
+                    <div id="pokemon-phisical-stats" class="screen">
+                        <div id="pokemon-height">Taille</div>
+                        <div id="pokemon-weight">poids</div>
+                    </div>
+                    <div class="panel-header"> Types</div>
+                    <div id="pokemon-types" class="type-box"></div>
 
-    <table id="table-pokemons">
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>Nom</th>
-            <th>Type(s)</th>
-            <th>évolue en</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td colspan="3">Chargement...</td>
-        </tr>
-        </tbody>
-    </table>
+                </div>
+            </div>
+            <div id="pokemon-evolutions">
+                <table>
+                    <thead>
+                        <th> I</th>
+                        <th> II</th>
+                        <th> III</th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td id="evolution-0-sprite" class="evolution-sprite">
+                            <button class="pokemon-sprite"><img src="img/pokeball.png"  alt="pokeball"></button>
+
+                        </td>
+                        <td id="evolution-1-sprite" class="evolution-sprite">
+                            <button class="pokemon-sprite"><img src="img/pokeball.png" alt="pokeball"></button>
+                        </td>
+                        <td id="evolution-2-sprite" class="evolution-sprite">
+                            <button class="pokemon-sprite"><img src="img/pokeball.png"  alt="pokeball"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="evolution-0-name" class="evolution-name screen">No data</td>
+                        <td id="evolution-1-name" class="evolution-name screen">No data</td>
+                        <td id="evolution-2-name" class="evolution-name screen">No data</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <ul id="pokemons">
+                <li>Chargement...</li>
+            </ul>
+            <div id="pokemon-next-buttons">
+                    <button onclick="nextPokemon(-1)"></button>
+                    <div id="pokemon-id" class="screen">000</div>
+                    <button onclick="nextPokemon(1)"></button>
+            </div>
+        </div>
+        </div>
+    <div id="menu">
+        <h2>Menu</h2>
+        <button id="menu-pokemons"><a href="index.html">Pokémons</a></button>
+        <button id="menu-dresseurs"><a href="liste%20dresseurs.html">Dresseurs</a></button>
+    </div>
 </main>
 
 <script src="js/config.js"></script>
